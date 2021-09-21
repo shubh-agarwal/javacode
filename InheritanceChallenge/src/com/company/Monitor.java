@@ -6,7 +6,4 @@ public class Monitor {
     private String manufacturer;
     private int size;
 
-
-
-
 }
