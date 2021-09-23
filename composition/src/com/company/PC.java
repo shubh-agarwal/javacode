@@ -6,21 +6,30 @@ public class PC {
     private Monitor monitor;
     private motherBoard motherBoard;
 
+    public void powerUp() {
+      theCase.pressPowerButton();
+        drawLogo();
+    }
+
+    private void drawLogo(){
+        getMonitor().drawPixelAt(1200,50,"yellow");
+    }
+
     public PC(Case theCase, Monitor monitor, com.company.motherBoard motherBoard) {
         this.theCase = theCase;
         this.monitor = monitor;
         this.motherBoard = motherBoard;
     }
 
-    public Case getTheCase() {
+    private Case getTheCase() {
         return theCase;
     }
 
-    public Monitor getMonitor() {
+    private Monitor getMonitor() {
         return monitor;
     }
 
-    public com.company.motherBoard getMotherBoard() {
+    private com.company.motherBoard getMotherBoard() {
         return motherBoard;
     }
 }
